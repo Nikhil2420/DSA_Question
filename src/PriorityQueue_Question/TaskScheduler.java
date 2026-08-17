@@ -22,9 +22,9 @@ public class TaskScheduler {
         while (!maxHeap.isEmpty()) {
             List<Integer> temp = new ArrayList<>();
             for (int i = 0; i <= k; i++) {
-                //after doing one task for same task we can do after k
+                //after doing one task that same task can be done after k period
                 //so in between we do other task
-                //thatswhy a total k+1 task
+                //that's why a total k+1 task
                 if (!maxHeap.isEmpty()) {
                     int cnt = maxHeap.poll();
                     cnt--;
