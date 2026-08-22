@@ -3,7 +3,8 @@ package Question;
 public class TheCelebrityProblem {
 
     public int celebrity(int mat[][]) {
-        // code here
+
+        //mat[i][j]=1 mean ith person knows jth person
         int m = mat.length;
         int n = mat[0].length;
         int knowMe[] = new int[m];
