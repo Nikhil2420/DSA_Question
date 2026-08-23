@@ -26,7 +26,7 @@ public class Combinations {
         for (int i = idx; i < n; i++) {
             temp.add(nums[i]);
             sum(k, temp, i + 1, n);
-            temp.remove(temp.size() - 1);
+            temp.removeLast();
         }
     }
 }
