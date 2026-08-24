@@ -2,10 +2,10 @@ package DP;
 
 public class Node {
 
-    int data;
-    Node left, right;
+    public int data;
+    public Node left, right;
 
-    Node(int val) {
+    public Node(int val) {
         data = val;
         left = right = null;
 
