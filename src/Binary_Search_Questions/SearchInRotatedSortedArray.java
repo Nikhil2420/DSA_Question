@@ -10,10 +10,13 @@ public class SearchInRotatedSortedArray {
         while (low <= high) {
             int mid = (low + high) / 2;
             if (arr[mid] == key) return mid;
+            //left half sorted
             if (arr[low] <= arr[mid]) {
                 if (key >= arr[low] && key <= arr[mid]) high = mid - 1;
                 else low = mid + 1;
-            } else {
+            }
+            //right half sorted
+            else {
                 if (key >= arr[mid] && key <= arr[high]) low = mid + 1;
                 else high = mid - 1;
             }
