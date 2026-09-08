@@ -1,4 +1,4 @@
-package Question;
+package Question.interval_Question;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package Question;
+package Question.Array_Question;
 
 public class ProductOfArrayExceptItself {
 
