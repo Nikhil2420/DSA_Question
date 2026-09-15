@@ -28,6 +28,20 @@ public class DesignTwitter {
             collect(Collectors.toList())->modifiable list
             toList() provide unmodifiable list
      */
+
+    /*
+            Map<Integer, List<Tweet>> map = new HashMap<>();
+            and User 5 hasn't tweeted.
+            map.get(5) returns null not []
+            instead
+            map.getOrDefault(5, new ArrayList<>()) returns []
+     */
+
+
+    /*
+            .collect(Collectors.toList()) and new ArrayList<>(toList result)->>modifiable list;
+            .toList(),List.of ->unModifiable List
+     */
     public List<Integer> getNewsFeed(int userId) {
         List<Tweet> tweetList = userTweetIdList.getOrDefault(userId, new ArrayList<>());
         List<Integer> userFollowsList = userFollowedList.getOrDefault(userId, new ArrayList<>());
@@ -64,7 +78,15 @@ public class DesignTwitter {
 
     public void unfollow(int followerId, int followeeId) {
         if (userFollowedList.containsKey(followerId)) {
-            userFollowedList.get(followerId).remove(followeeId);
+            /*
+                Integer.valueOf(followeeId)
+                because list has two remove method one take index and other object
+                so if we directly give followeeId it will treat that as index
+                that's why .
+                remove(int index)
+                remove(Object object)
+             */
+            userFollowedList.get(followerId).remove(Integer.valueOf(followeeId));
         }
     }
 
