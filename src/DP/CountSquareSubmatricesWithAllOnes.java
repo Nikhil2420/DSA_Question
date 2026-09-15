@@ -11,6 +11,10 @@ public class CountSquareSubmatricesWithAllOnes {
                 if (matrix[i][j] == 1 && i > 0 && j > 0) {
                     matrix[i][j] = Math.min(matrix[i][j - 1], Math.min(matrix[i - 1][j], matrix[i - 1][j - 1])) + 1;
                 }
+                /*
+                    here we are also including matrix of 1 length
+                    having 1 as value.
+                */
                 res += matrix[i][j];
             }
         }
